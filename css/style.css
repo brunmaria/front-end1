@@ -1,0 +1,282 @@
+/*HEADER*/
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+.flex {
+  display: flex;
+}
+
+header {
+  justify-content: space-around;
+  align-items: center;
+}
+
+.menu {
+  list-style: none;
+  padding: 20px;
+  /*flex-direction: row; verificar si dejar o sacar*/
+}
+
+.menu1 {
+  text-decoration: none;
+  color: #242e52;
+}
+.a {
+  list-style: none;
+}
+
+li {
+  margin: 28px;
+}
+button {
+  width: 134px;
+  height: 44px;
+  color: white;
+  background-color: #8b48bf;
+  border-radius: 50px;
+}
+/* falta:
+- pseudoselector sobre el menu
+- buttom contact*/
+
+/*MAIN*/
+.seccion-principal {
+  padding: 10vh 10vw;
+}
+
+.imagen-principal {
+  width: 50%;
+  /*cambiar a VW*/
+}
+
+.titulo-principal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  width: 50%;
+  text-align: right;
+}
+
+.titulo-live {
+  font-size: 50px;
+  color: #232c50;
+  font-weight: 700;
+  width: 450px;
+  height: 230px;
+  padding: 15px;
+}
+
+.parrafo-main {
+  text-align: right;
+  width: 450px;
+
+  /* REEEEESOLLLVER*/
+}
+
+/*BANNER VIOLETA-*/
+
+.banner {
+  list-style: inside;
+  height: 168px;
+  background-color: #8b48bf;
+  color: white;
+  padding: 40px 180px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.titulo-banner {
+  font-size: 35px;
+  font-weight: 700;
+}
+
+.p2 {
+  font-style: medium;
+  width: 450px;
+  margin: 40px 0px 40px 100px; /*revisar porque se rompe en mobile*/
+}
+
+/*ARTICULOS*/
+.number-cards {
+  background-color: #fafafa;
+  margin-top: 25px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.box-card {
+  margin: 15px;
+}
+
+
+
+.articulo1 {
+  text-align: justify;
+  margin-right: 167px;
+  width: 50%;
+}
+
+.numbers {
+  display: flex;
+  background-color: #8b48bf;
+  color: white;
+  width: 70px;
+  height: 43px;
+  border-radius: 30px;
+  justify-content: center;
+  padding: 10px;
+  margin-right: 20px;
+  font-size: 16px;
+}
+h4 {
+  padding-top: 15px;
+}
+.titulo {
+  font-weight: 1000;
+}
+
+.paragraph-number {
+  width: 540px;
+  height: 100px;
+  padding: 5px 0px 0px 92px;
+  color: #b3b2b7;
+  text-align: ;
+}
+
+/*todas con 40% asi dos quedan arriba y la otra se va abajo
+flex inline block?*/
+
+/*BEST OF THE MONTH*/
+
+/*justify content center y ya
+positio absolute
+o relative (?)
+*/
+
+.best-of-the-month {
+  text-align: justify;
+  background-color: #fafafa;
+  justify-content: center;
+  padding-bottom: 15px;
+}
+
+.titulo-best {
+  color: #232c50;
+  font-size: 40px;
+  margin-bottom: 60px;
+}
+.avatar {
+ width: 65px;
+ height: 65px;
+ position: relative;
+ align-items: center;
+ top: -45px;
+}
+
+h5 {
+  text-align: center;
+  color: #232c50;
+}
+
+.tarjeta-jugador {
+  margin: 20px;
+  width: 40vw;
+  height: 15vh;
+  margin-bottom: 40px;
+  color: #B9B9C1;
+  text-align: center;
+  
+
+  /*dar position absulute a la imagen*/
+}
+.avatar-sanyo {
+  position: relative;
+}
+
+.titulo-best-of-the-month,
+.button-more {
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.button-more {
+  margin-bottom: 100px;
+}
+
+/*BANNER VIOLETA2*/
+
+.button-go-for-it {
+  font-style: medium;
+  background-color: #ffffff;
+  color: #8b48bf;
+}
+
+/*FOOTER*/
+.footer {
+  background-color: #1e1e26;
+  color: #fafafa;
+}
+.logos {
+  background-color: #1e1e26;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 33%;
+  text-align: center;
+}
+
+.redes-sociales {
+  justify-content: space-around;
+  padding-left: 140px;
+  padding-right: 140px;
+}
+/*.menu2 {
+  background-color: blue;
+  padding-left: 10px;
+}*/
+
+.lista-footer li {
+  list-style-type: none;
+  padding-right: 10px;
+}
+
+.menu-2 {
+  text-decoration: none;
+  color: #ffffff;
+  justify-content: space-around;
+  padding: 40px;
+}
+
+.formulario {
+  justify-content: space-around;
+  flex-direction: column;
+}
+.form {
+  width: 201px;
+  height: 44px;
+  border-radius: 50px;
+}
+.copyright {
+  color: #8c8c94;
+  font-size: 12, 5px;
+}
+
+/*MEDIA QUERIES*/
+
+/*@media (min-width: 412px){
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+*/
+@media (max-width: 412px) and (orientation: portrait) {
+  * {
+    display: flex;
+    flex-direction: column;
+  }
+}
