@@ -15,12 +15,23 @@ header {
   align-items: center;
 }
 
+a:hover {
+  color: #8b48bf;
+}
+
+button:hover {
+  background-color: #8b48bfb2;
+}
+
 .menu {
   list-style: none;
   padding: 20px;
   /*flex-direction: row; verificar si dejar o sacar*/
 }
 
+.menu-mobile {
+  display: none;
+}
 .menu1 {
   text-decoration: none;
   color: #242e52;
@@ -39,9 +50,6 @@ button {
   background-color: #8b48bf;
   border-radius: 50px;
 }
-/* falta:
-- pseudoselector sobre el menu
-- buttom contact*/
 
 /*MAIN*/
 .seccion-principal {
@@ -74,32 +82,30 @@ button {
 .parrafo-main {
   text-align: right;
   width: 450px;
-
-  /* REEEEESOLLLVER*/
 }
 
 /*BANNER VIOLETA-*/
 
 .banner {
   list-style: inside;
-  height: 168px;
+  width: 100%;
   background-color: #8b48bf;
   color: white;
-  padding: 40px 180px;
-  box-sizing: border-box;
-  align-items: center;
-  justify-content: space-around;
+  /* align-items: center; */
+  justify-content: space-evenly;
+  padding: 40px;
+  text-align: center;
 }
 
 .titulo-banner {
   font-size: 35px;
   font-weight: 700;
+  width: 40%;
 }
 
-.p2 {
+.paragraph-banner {
   font-style: medium;
-  width: 450px;
-  margin: 40px 0px 40px 100px; /*revisar porque se rompe en mobile*/
+  width: 40%; /*revisar porque se rompe en mobile*/
 }
 
 /*ARTICULOS*/
@@ -110,17 +116,19 @@ button {
   justify-content: center;
 }
 
+.header-number {
+  position: static;
+}
+
 .box-card {
   margin: 15px;
 }
 
-
-
-.articulo1 {
+/*.articulo1 {
   text-align: justify;
   margin-right: 167px;
   width: 50%;
-}
+}*/
 
 .numbers {
   display: flex;
@@ -134,6 +142,7 @@ button {
   margin-right: 20px;
   font-size: 16px;
 }
+
 h4 {
   padding-top: 15px;
 }
@@ -146,11 +155,7 @@ h4 {
   height: 100px;
   padding: 5px 0px 0px 92px;
   color: #b3b2b7;
-  text-align: ;
 }
-
-/*todas con 40% asi dos quedan arriba y la otra se va abajo
-flex inline block?*/
 
 /*BEST OF THE MONTH*/
 
@@ -159,24 +164,27 @@ positio absolute
 o relative (?)
 */
 
-.best-of-the-month {
+.titulo-best {
+  color: #232c50;
+  font-size: 40px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  justify-content: center;
+}
+
+.cards-best-of-the-month {
   text-align: justify;
   background-color: #fafafa;
   justify-content: center;
   padding-bottom: 15px;
 }
 
-.titulo-best {
-  color: #232c50;
-  font-size: 40px;
-  margin-bottom: 60px;
-}
 .avatar {
- width: 65px;
- height: 65px;
- position: relative;
- align-items: center;
- top: -45px;
+  width: 65px;
+  height: 65px;
+  position: relative;
+  align-items: center;
+  top: -45px;
 }
 
 h5 {
@@ -189,27 +197,27 @@ h5 {
   width: 40vw;
   height: 15vh;
   margin-bottom: 40px;
-  color: #B9B9C1;
+  color: #b9b9c1;
   text-align: center;
-  
-
-  /*dar position absulute a la imagen*/
 }
 .avatar-sanyo {
   position: relative;
 }
 
-.titulo-best-of-the-month,
+.cards-best-of-the-month,
 .button-more {
   justify-content: center;
   margin-top: 40px;
-}
-
-.button-more {
-  margin-bottom: 100px;
+  margin-bottom: 60px;
 }
 
 /*BANNER VIOLETA2*/
+
+.teams-title,
+.teams-button {
+  width: 50%;
+  align-items: center;
+}
 
 .button-go-for-it {
   font-style: medium;
@@ -268,15 +276,117 @@ h5 {
 
 /*MEDIA QUERIES*/
 
-/*@media (min-width: 412px){
-  body {
+@media screen and (max-width: 480px) {
+  header {
+    width: 100%;
+    height: 140px;
+  }
+  .menu,
+  .button-header {
+    display: none;
+  }
+  .menu-mobile {
     display: flex;
+  }
+
+  /*MAIN*/
+  .seccion-principal {
     flex-direction: column;
   }
-*/
-@media (max-width: 412px) and (orientation: portrait) {
-  * {
-    display: flex;
+  .imagen-principal,
+  .titulo-principal,
+  .parrafo-main {
+    width: 100%;
+  }
+
+  .parrafo-main {
+    margin: 20px;
+  }
+
+  /*BANNER VIOLETA*/
+  .banner {
     flex-direction: column;
+    background-color: #e0792a;
+    width: 100%;
+    align-items: center;
+  }
+  .titulo-banner {
+    flex-direction: column;
+    width: 80%;
+    margin-bottom: 20px;
+  }
+  .paragraph-banner {
+    width: 80%;
+    /* height: 100px; */
+  }
+
+  /*ARTICULOS*/
+
+  .numbers {
+    position: absolute;
+  }
+
+  .title-card {
+    background-color: #8b48bf4d;
+    width: 450px;
+    height: 46px;
+    /* position: relative; */
+    /* left: 15px; */
+    padding-left: 80px;
+    border-radius: 50px 0px 0px 50px;
+  }
+
+  .paragraph-number {
+    align-items: center;
+    width: 408px;
+    height: 108px;
+  }
+
+  /*BEST OF THE MONTH*/
+
+  .lebron,
+  .navarro {
+    display: none;
+  }
+  .button-more {
+    margin-top: 100px;
+  }
+
+  /*BANNER*/
+
+  .teams-title {
+    margin-bottom: 30px;
+  }
+
+  /*FOOTER*/
+  .footer {
+    flex-direction: column-reverse;
+  }
+
+  .formulario {
+    align-items: center;
+    margin: 35px;
+  
+  }
+  /*modificar medida boton*/
+
+  .redes-sociales a {
+    padding-left: 4vw;
+    padding-right: 4vw;
+  }
+  .redes-sociales {
+    padding-bottom: 50px;
+  }
+  .logos {
+    align-items:center;
+    flex-direction: column-reverse;
+    width: 100%;
+    padding-bottom: 80px;
+         
+}
+  .copyright {
+    position: relative;
+    top: 420px;
+    
   }
 }
